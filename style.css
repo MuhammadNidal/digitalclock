@@ -1,0 +1,51 @@
+body {
+    background-color:yellowgreen;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#time {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:wheat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+#ampm {
+    font-size: 1.5em;
+    color: #555;
+}
+
+#hours, #minutes, #seconds {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#time:hover #hours, #time:hover #minutes, #time:hover #seconds {
+    opacity: 1;
+}
+
+#hours, #minutes, #seconds {
+    opacity: 1;
+}
